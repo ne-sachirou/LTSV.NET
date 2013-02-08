@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2012 for Web
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LTSV", "LTSV\LTSV.csproj", "{618C8825-F757-409F-8114-0F93FB5D07FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestLTSV", "UnitTestLTSV\UnitTestLTSV.csproj", "{60C0EFDF-B388-4000-9943-61E57A7B7073}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{618C8825-F757-409F-8114-0F93FB5D07FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{618C8825-F757-409F-8114-0F93FB5D07FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{618C8825-F757-409F-8114-0F93FB5D07FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{618C8825-F757-409F-8114-0F93FB5D07FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60C0EFDF-B388-4000-9943-61E57A7B7073}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60C0EFDF-B388-4000-9943-61E57A7B7073}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60C0EFDF-B388-4000-9943-61E57A7B7073}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60C0EFDF-B388-4000-9943-61E57A7B7073}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
