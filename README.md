@@ -3,7 +3,7 @@ LTSV.NET
 C# implementation of [LTSV (Labeled Tab-separated Values)](http://ltsv.org/).
 
 Usage
-=====
+-----
 Parse LTSV.
 ```cs
 var ltsvStr = "hunter:sAccan\tmOmonga:10\nhunter:lotus_gate\tmOmonga:1e6";
@@ -30,5 +30,5 @@ Console.WriteLine(ltsv.ToString());
 ```
 
 License
-=======
+-------
 (Public Domain)2013 ne_Sachirou &lt;utakata.c4se@gmail.com&gt;
