@@ -2,6 +2,13 @@ LTSV.NET
 ========
 C# implementation of [LTSV (Labeled Tab-separated Values)](http://ltsv.org/).
 
+Install
+-------
+Install from NuGet ([NuGet Gallery | LTSV.NET](https://nuget.org/packages/LTSV/)).
+```ps1
+PM> Install-Package LTSV
+```
+
 Usage
 -----
 Parse an LTSV record.
