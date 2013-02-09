@@ -4,13 +4,6 @@ C# implementation of [LTSV (Labeled Tab-separated Values)](http://ltsv.org/).
 
 Usage
 -----
-Parse LTSV.
-```cs
-var ltsvStr = "hunter:sAccan\tmOmonga:10\nhunter:lotus_gate\tmOmonga:1e6";
-new LTSV.LTSV(ltsvStr).Records;
-new LTSV.LTSV().Parse(ltsvStr).Records;
-```
-
 Parse an LTSV record.
 ```cs
 LTSV.LTSV.ParseLine("time:28/Feb/2013:12:00:00 +0900\thost:192.168.0.1\treq:GET /list HTTP/1.1\tstatus:200\n");
@@ -21,6 +14,25 @@ LTSV.LTSV.ParseLine("time:28/Feb/2013:12:00:00 +0900\thost:192.168.0.1\treq:GET 
 //        { "req", "GET /list HTTP/1.1" },
 //        { "status", "200" }
 //    };
+```
+
+Build an LTSV record.
+```cs
+LTSV.LTSV.BuildLine(new Dictionary<string, string>
+    {
+        { "time", "28/Feb/2013:12:00:00 +0900" },
+        { "host", "192.168.0.1" },
+        { "req", "GET /list HTTP/1.1" },
+        { "status", "200" }
+    });
+// => "time:28/Feb/2013:12:00:00 +0900\thost:192.168.0.1\treq:GET /list HTTP/1.1\tstatus:200"
+```
+
+Parse LTSV.
+```cs
+var ltsvStr = "hunter:sAccan\tmOmonga:10\nhunter:lotus_gate\tmOmonga:1e6";
+new LTSV.LTSV(ltsvStr).Records;
+new LTSV.LTSV().Parse(ltsvStr).Records;
 ```
 
 Build LTSV.

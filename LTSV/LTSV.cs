@@ -4,7 +4,7 @@ using System.Text.RegularExpressions;
 namespace LTSV
 {
     /// <summary>
-    /// [LTSV (Labeled Tab-separated Values) parser and builder.
+    /// LTSV (Labeled Tab-separated Values) parser and builder.
     /// </summary>
     public class LTSV
     {
@@ -33,6 +33,24 @@ namespace LTSV
                 record[match.Groups[1].Value] = match.Groups[2].Value;
             }
             return record;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="record"></param>
+        /// <returns></returns>
+        static public string BuildLine(Dictionary<string, string> record)
+        {
+            var recordStr = "";
+            bool isFirstField = true;
+            foreach (var field in record)
+            {
+                if (isFirstField) isFirstField = false;
+                else recordStr += "\t";
+                recordStr += string.Format("{0}:{1}", field.Key, field.Value);
+            }
+            return recordStr;
         }
 
         /// <summary>
@@ -82,14 +100,7 @@ namespace LTSV
             bool isFirstRecord = true;
             foreach (var record in Records)
             {
-                string recordStr = "";
-                bool isFirstField = true;
-                foreach (var field in record)
-                {
-                    if (isFirstField) isFirstField = false;
-                    else recordStr += "\t";
-                    recordStr += string.Format("{0}:{1}", field.Key, field.Value);
-                }
+                var recordStr = BuildLine(record);
                 if (isFirstRecord) isFirstRecord = false;
                 else ltsvStr += "\n";
                 ltsvStr += recordStr;
