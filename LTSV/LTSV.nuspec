@@ -11,8 +11,8 @@
     <iconUrl>https://raw.github.com/ne-sachirou/LTSV.NET/master/LTSV/content/images/icon100.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
-    <releaseNotes>Fix the icon.</releaseNotes>
+    <releaseNotes>Important! Change the class name from "LTSV.LTSV" to "LTSV.Ltsv".</releaseNotes>
     <copyright>Public Domain 2013</copyright>
-    <tags>LTSV</tags>
+    <tags>LTSV C#</tags>
   </metadata>
 </package>

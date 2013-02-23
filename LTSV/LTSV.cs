@@ -6,7 +6,7 @@ namespace LTSV
     /// <summary>
     /// LTSV (Labeled Tab-separated Values) parser and builder.
     /// </summary>
-    public class LTSV
+    public class Ltsv
     {
         /// <summary>
         /// LTSV record parser.
@@ -61,7 +61,7 @@ namespace LTSV
         /// <summary>
         /// 
         /// </summary>
-        public LTSV()
+        public Ltsv()
         {
         }
 
@@ -69,7 +69,7 @@ namespace LTSV
         /// 
         /// </summary>
         /// <param name="ltsvStr">LTSV string</param>
-        public LTSV(string ltsvStr)
+        public Ltsv(string ltsvStr)
         {
             Parse(ltsvStr);
         }
@@ -79,7 +79,7 @@ namespace LTSV
         /// </summary>
         /// <param name="ltsvStr"></param>
         /// <returns>this</returns>
-        public LTSV Parse(string ltsvStr)
+        public Ltsv Parse(string ltsvStr)
         {
             var recordStrs = Regex.Split(ltsvStr.Trim(), @"\r?\n");
             foreach (var recordStr in recordStrs)

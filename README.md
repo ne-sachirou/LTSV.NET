@@ -1,6 +1,6 @@
 LTSV.NET
 ========
-C# implementation of [LTSV (Labeled Tab-separated Values)](http://ltsv.org/).
+Just simple C# (.NET) implementation for [LTSV (Labeled Tab-separated Values)](http://ltsv.org/).
 
 Install
 -------
@@ -11,9 +11,14 @@ PM> Install-Package LTSV
 
 Usage
 -----
+Using namespace.
+```cs
+using LTSV;
+```
+
 Parse an LTSV record.
 ```cs
-LTSV.LTSV.ParseLine("time:28/Feb/2013:12:00:00 +0900\thost:192.168.0.1\treq:GET /list HTTP/1.1\tstatus:200\n");
+Ltsv.ParseLine("time:28/Feb/2013:12:00:00 +0900\thost:192.168.0.1\treq:GET /list HTTP/1.1\tstatus:200\n");
 // => new Dictionary<string, string>
 //    {
 //        { "time", "28/Feb/2013:12:00:00 +0900" },
@@ -25,7 +30,7 @@ LTSV.LTSV.ParseLine("time:28/Feb/2013:12:00:00 +0900\thost:192.168.0.1\treq:GET 
 
 Build an LTSV record.
 ```cs
-LTSV.LTSV.BuildLine(new Dictionary<string, string>
+Ltsv.BuildLine(new Dictionary<string, string>
     {
         { "time", "28/Feb/2013:12:00:00 +0900" },
         { "host", "192.168.0.1" },
@@ -38,13 +43,13 @@ LTSV.LTSV.BuildLine(new Dictionary<string, string>
 Parse LTSV.
 ```cs
 var ltsvStr = "hunter:sAccan\tmOmonga:10\nhunter:lotus_gate\tmOmonga:1e6";
-new LTSV.LTSV(ltsvStr).Records;
-new LTSV.LTSV().Parse(ltsvStr).Records;
+new Ltsv(ltsvStr).Records;
+new Ltsv().Parse(ltsvStr).Records;
 ```
 
 Build LTSV.
 ```cs
-var ltsv = new LTSV.LTSV("hunter:sAccan\tmOmonga:10\nhunter:lotus_gate\tmOmonga:1e6");
+var ltsv = new Ltsv("hunter:sAccan\tmOmonga:10\nhunter:lotus_gate\tmOmonga:1e6");
 Console.WriteLine(ltsv.ToString());
 ```
 
